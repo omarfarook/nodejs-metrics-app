@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'nodejs-metrics-app'
+    static_configs:
+      - targets: ['nodejs-metrics-app:3000']  # Match the service name in docker-compose
